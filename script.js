@@ -8,6 +8,7 @@ function makeGrid(gridSize) {
       const cell = document.createElement("div")
       cell.style.width = `${700 / gridSize}px`;
       cell.style.height = `${700 / gridSize}px`;
+      cell.classList.add("cell")
       column.appendChild(cell);
     }
     
