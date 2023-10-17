@@ -24,3 +24,15 @@ function addBlackHover() {
     cell.addEventListener('mouseover', () => cell.style.backgroundColor = 'black');
   });
 }
+
+//Button that asks user for new grid size and draws it 
+const newGrid = document.querySelector(".new");
+newGrid.addEventListener("click", () =>{
+  const newSize = prompt("Enter a new grid size\nNot bigger than 100");
+  if (newSize <= 100) {
+    grid.innerHTML = "";
+    makeGrid(newSize);
+  } else {
+    alert("You must enter a number not higher than 100");
+  }
+});
