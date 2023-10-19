@@ -53,3 +53,7 @@ function addRandomHover() {
       cell.style.backgroundColor = getRandomColor()});
   });
 }
+
+//Button that enables random hover mode
+const random = document.querySelector(".random");
+random.addEventListener("click", () => addRandomHover());
