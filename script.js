@@ -73,3 +73,7 @@ function addGradientHover() {
     cell.dataset.opacity = String(opacity);
   }));
 }
+
+// Button that enables gradient mode 
+const gradient = document.querySelector(".gradient");
+gradient.addEventListener("click", () => addGradientHover());
