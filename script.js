@@ -36,3 +36,20 @@ newGrid.addEventListener("click", () =>{
     alert("You must enter a number not higher than 100");
   }
 });
+
+// Returns a random RGB value 
+function getRandomColor() {
+  const r = Math.floor(Math.random() * 255);
+  const g = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
+  return `rgb(${r},${g},${b})`;
+}
+
+// Add a hover effect that gives the cells random color 
+function addRandomHover() {
+  const cells = document.querySelectorAll(".cell");
+  cells.forEach(cell => {
+    cell.addEventListener("mouseover", () => {
+      cell.style.backgroundColor = getRandomColor()});
+  });
+}
