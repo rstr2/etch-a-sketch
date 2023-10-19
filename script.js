@@ -57,3 +57,19 @@ function addRandomHover() {
 //Button that enables random hover mode
 const random = document.querySelector(".random");
 random.addEventListener("click", () => addRandomHover());
+
+// Darken the color with each hover 
+function addGradientHover() {
+  const cells = document.querySelectorAll(".cell");
+  cells.forEach(cell => {
+    cell.style.backgroundColor = "rgba(0,0,0,0)";
+    cell.setAttribute("data-opacity", "0");
+  });
+
+  cells.forEach(cell => cell.addEventListener("mouseover", () => {
+    let opacity = Number(cell.dataset.opacity);
+    opacity += 0.1;
+    cell.style.backgroundColor = `rgba(0,0,0,${opacity})`;
+    cell.dataset.opacity = String(opacity);
+  }));
+}
